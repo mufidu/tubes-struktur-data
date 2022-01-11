@@ -40,7 +40,16 @@ void deleteParent(mobil &M, string name)
         {
             first(M) = next(P);
         }
-        else
+        else if (P == last(M))
+        {
+            adr_brand Q = first(M);
+            while (next(Q) != P)
+            {
+                Q = next(Q);
+            }   
+            next(Q) = NULL; 
+            last(M) = Q;
+        }   
         {
             adr_brand Q = first(M);
             while (next(Q) != P)
