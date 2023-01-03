@@ -27,12 +27,11 @@ struct brand {
 
 struct product {
     string name;
-    unsigned long int price;
+    // Up to 1 quintillion (10^18)
+    unsigned long long int price;
     string type;
     adr_product next;
 };
-
-
 
 struct mobil {
     adr_brand first;
